@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contos Brasil - Seu quase site sobre literatura</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <!-- links hrefs sao para abrir arquivos externos -->
+    <link rel="stylesheet" href="css/estilo.css">
+
+    <style>
+         body{
+            background-image: url('img/fundovelho.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;   
+
+            /* cover ajuda o tamanho para o conteudo e contain ajusta para a tela inteira */
+        }
+        .coluna1, .coluna2{
+            width: 45%;
+        }
+    
+        figure{
+            height: 450px;
+            width: 450px;
+            overflow: hidden;
+
+        }
+        .coluna2{
+            border-left: 0px solid #777;
+        }
+
+        /* JAVA */
+
+        .popup{
+            position: fixed;
+            right: 40px;
+            bottom: 40px;
+            width: 350px;   
+            padding: 10px;
+            background-color: rgb(124, 106, 78);
+            border: 1px solid rgb(0, 0, 0);
+            box-shadow: 5px 5px 5px rgb(0, 0, 0);
+            display: none;
+        }
+         .fechar{
+             position: absolute;
+             right: -25px;
+             top: 0;
+             cursor: pointer;
+         }   
+         .abre-popup{
+             padding: 10px;
+             cursor: pointer;
+         }
+         .abre-popup, .abre-popup h2{
+            width: fit-content;
+         }
+    </style>
+
+</head>
+<body>
+
+    <!-- Cabeçalho do site com logotipo e menu -->
+    <header>
+        <!-- h1 title faz aparecer uma mensagem n o title quando passa o mouse por cima -->
+        <div class="logo">
+            <h1 title="Seu quase site com grandes crônicas da literatura brasileira"><i class="fa fa-book-reader fa-2x"></i> Contos Brasil</h1>
+        </div>
+        <!-- menu principal -->
+        <nav>
+
+            <ul>
+                <li><a href="index.html">Autores</a></li>
+                <li><a href="o-homem-trocado.html">O homem trocado</a></li>
+                <li><a href="vida-de-cinema.html">Vida de Cinema</a></li>
+                <li><a href="amor.html">Amor</a></li>
+                <li><a href="felicidade-clandestina.html">Felicidade Clandestina</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <section class="abre-popup">
+        <h2>Participe de um sorteio de livro</h2>
+    </section>
+
+    <section class="popup">
+        <button type="button" class="fechar"> X </button>
+        <p>
+            Preencha o seu nome e email e concorra a um livro de crônica da Clarisse Lispector
+        </p>
+        <form>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" ><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" ><br>
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+
+    <!-- Area de conteudo - contos e fotos -->
+    <div class="conteudo">
+        <div class="coluna1">
+            <h2>Luiz Fernando Veríssimo</h2>
+            <figure> 
+                 <img src="img/luiz-fernando.jpg" width="90%" alt="Foto do Escritor Luis Fernando Veríssimo sentado em uma poltrona">  
+            </figure>
+            <p>Luis Fernando Verissimo (1936) é um escritor brasileiro. Famoso por suas crônicas e contos de humor, é também jornalista, tradutor, roteirista de programas para televisão e músico. É filho do escritor Érico Verissimo.</p>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/Zv9qHEHyPbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="coluna2">
+            <h2>Clarisse Lispector</h2>
+            <figure>
+                 <img src="img/clarisse-lispector.jpg" width="90%" alt="Foto da Escritora Clarisse Lispector em preto e branco">
+            </figure>
+            <p>Clarice Lispector (1920-1977) foi um dos maiores nomes da literatura brasileira do Século XX. Com seu romance inovador e com sua linguagem altamente poética, sua obra se destacou diante dos modelos narrativos tradicionais. Seu primeiro livro, “Perto do Coração Selvagem” recebeu o Prêmio Graça Aranha.</p>
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/uljDP9vMJTk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <!-- Rodape com creditos e outros counteudos  -->
+    <!-- <footer onclick="javascrip:alert('Olá mundo!!')"> -->
+    <footer id="rodape">
+        <p><b>Onde estamos</b></p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.7403279916434!2d-45.864461985029465!3d-23.179675684873633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4bcbf48e5dc3%3A0xb305787ea4a96d06!2sR.%20Ari%20Barroso%2C%2030%20-%20Vila%20Industrial%2C%20S%C3%A3o%20Jos%C3%A9%20dos%20Campos%20-%20SP%2C%2012220-390!5e0!3m2!1spt-BR!2sbr!4v1617105618814!5m2!1spt-BR!2sbr" width="80%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <p><b>&copy; 2021 - Contos Brasil - Desenvolvido por Eduardo Paiva</b></p>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>   
+    <script>
+        //Isto é um comentário de linha
+        /* A sintaxe para execução de um método
+        a partir de um elemento é feita conforme abaixo: */
+        /* document.getElementById('rodape').onclick = function(){
+            console.log('Bom dia, a data atual é ' + Date());
+        } */
+
+        $('#rodape').click(function(){
+            console.log('Bom dia, a data atual é ' + Date());
+        })
+    
+        //Exibe o popup ao clicar em abre-pop-up
+        $('.abre-popup').click(function(){
+            // $('.popup').css('display','block');
+            // $('.popup').fadeIn(1500);
+            $('.popup').slideDown();
+            $('.fechar').click(function(){
+            $('.popup').fadeOut();
+        })
+        });
+
+    </script>
+
+</body>
+</html>
